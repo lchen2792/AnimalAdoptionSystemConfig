@@ -12,7 +12,7 @@ spring:
         - id: animal-service
           uri: lb://animal-service/graphql
           predicates:
-            - Path=/graphql/**
+            - Path=/animal-service/graphql/**
 
         - id: application-service
           uri: lb://application-service

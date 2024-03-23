@@ -5,7 +5,6 @@ spring:
   cloud:
     gateway:
       routes:
-
         - id: animal-service
           uri: lb://animal-service
           predicates:
@@ -29,7 +28,7 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-              - Path=/user-service/**
+            - Path=/user-service/**
 
 server:
   port: 9000

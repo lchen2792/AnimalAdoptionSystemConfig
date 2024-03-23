@@ -10,7 +10,7 @@ spring:
           lower-case-service-id: 'true'
       routes:
         - id: animal-service
-          uri: http://localhost:10001/graphql
+          uri: lb://animal-service/graphql
           predicates:
             - Path=/graphql/**
 

@@ -4,6 +4,10 @@ spring:
 
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: 'true'
+          lower-case-service-id: 'true'
       routes:
         - id: animal-service
           uri: http://localhost:10001/graphql

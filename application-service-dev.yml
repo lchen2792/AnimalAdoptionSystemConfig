@@ -6,8 +6,7 @@ application:
     max: 5
 
 web-client:
-  base-url: http://localhost:9092
-  # base-url: http://localhost:9000/payment-service
+  base-url: http://localhost:9000/payment-service
 
 spring:
   application:
@@ -17,6 +16,15 @@ spring:
       uri: mongodb+srv://root:root@cluster0.gf4mguw.mongodb.net/?retryWrites=true&w=majority
       database: cluster0
       port: 271017
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 
 axon:
   serializer:

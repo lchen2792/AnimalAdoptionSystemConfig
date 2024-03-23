@@ -6,9 +6,9 @@ spring:
     gateway:
       routes:
         - id: animal-service
-          uri: lb://animal-service/graphql
+          uri: http://localhost:10001/graphql
           predicates:
-            - Path=/animal-service/graphql/**
+            - Path=/graphql/**
 
         - id: application-service
           uri: lb://application-service

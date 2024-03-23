@@ -9,7 +9,7 @@ spring:
         - id: animal-service
           uri: lb://animal-service
           predicates:
-            - Path=/animal-service/**
+            - Path=/animal-service/graphql/**
 
         - id: application-service
           uri: lb://application-service

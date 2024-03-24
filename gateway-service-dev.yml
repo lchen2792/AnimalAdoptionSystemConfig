@@ -5,6 +5,12 @@ spring:
   cloud:
     gateway:
       discovery:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedMethods: '*'
+            allowedHeaders: '*'
         locator:
           enabled: 'true'
           lower-case-service-id: 'true'

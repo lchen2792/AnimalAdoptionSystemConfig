@@ -15,6 +15,7 @@ spring:
     name:
       auth-service
   mvc:
+    dispatch-options-request: true
     pathmatch:
       matching-strategy: ant_path_matcher
   jpa:

@@ -8,6 +8,10 @@ axon:
     messages: jackson
 
 spring:
+  security:
+    token:
+      life-time: 86400000
+      secret-key: MgtqlZi01l05/3fpeck2ZFwtjeqxrndplJK0acQ4l/pPj+pY5yo+DAGx/24ejx/8Icj+mJXtsCl+xfWVwezzAjmchy5A8VlQmBFmFr3uelw=
   application:
     name: user-service
   mvc:

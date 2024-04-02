@@ -27,7 +27,7 @@ spring:
           filters:
             - name: RoleBasedAuth
               args:
-                roles: CUSTOMER, EMPLOYEE, ADMIN
+                roles: [CUSTOMER, EMPLOYEE, ADMIN]
 
         - id: payment-service
           uri: lb://payment-service
@@ -41,7 +41,7 @@ spring:
           filters:
             - name: RoleBasedAuth
               args:
-                roles: CUSTOMER, EMPLOYEE, ADMIN
+                roles: [CUSTOMER, EMPLOYEE, ADMIN]
 
 server:
   port: 9000

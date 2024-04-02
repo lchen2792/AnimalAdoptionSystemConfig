@@ -24,6 +24,8 @@ spring:
           uri: lb://application-service
           predicates:
             - Path=/application-service/**
+          filters:
+            - RoleBasedAuth=CUSTOMER, EMPLOYEE, ADMIN
 
         - id: payment-service
           uri: lb://payment-service
@@ -34,6 +36,8 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/user-service/**
+          filters:
+            - RoleBasedAuth=CUSTOMER, EMPLOYEE, ADMIN
 
 server:
   port: 9000

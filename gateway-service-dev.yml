@@ -23,29 +23,10 @@ spring:
           uri: lb://animal-service/graphql
           predicates:
             - Path=/animal-service/graphql/**
-
-        - id: application-service
-          uri: lb://application-service
-          predicates:
-            - Path=/application-service/**
-          filters:
-            - name: RoleBasedAuth
-              args:
-                roles: [CUSTOMER, EMPLOYEE, ADMIN]
-
         - id: payment-service
           uri: lb://payment-service
           predicates:
             - Path=/payment-service/**
-
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/user-service/**
-          filters:
-            - name: RoleBasedAuth
-              args:
-                roles: [CUSTOMER, EMPLOYEE, ADMIN]
 
 server:
   port: 9000

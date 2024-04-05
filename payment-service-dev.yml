@@ -11,6 +11,12 @@ spring:
     user: root
     password: root
 
+axon:
+  serializer:
+    general: jackson
+    events: jackson
+    messages: jackson
+
 server:
   port: 0
 

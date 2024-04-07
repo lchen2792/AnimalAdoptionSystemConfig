@@ -39,3 +39,25 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - url: /v3/api-docs
+        name: Gateway Service
+        primaryName: Gateway Service
+      - url: /user-service/v3/api-docs
+        name: User Service
+        primaryName: User Service
+      - url: /application-service/v3/api-docs
+        name: Application Service
+        primaryName: Application Service
+      - url: /animal-service/v3/api-docs
+        name: Animal Service
+        primaryName: Animal Service
+      - url: /payment-service/v3/api-docs
+        name: Payment Service
+        primaryName: Payment Service

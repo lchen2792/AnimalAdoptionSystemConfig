@@ -33,3 +33,9 @@ spring:
     token:
       life-time: 86400000
       secret-key: MgtqlZi01l05/3fpeck2ZFwtjeqxrndplJK0acQ4l/pPj+pY5yo+DAGx/24ejx/8Icj+mJXtsCl+xfWVwezzAjmchy5A8VlQmBFmFr3uelw=
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

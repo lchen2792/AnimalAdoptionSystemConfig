@@ -11,8 +11,8 @@ spring:
       max-request-size: 50MB
   data:
     mongodb:
-      uri: mongodb+srv://root:root@cluster0.gf4mguw.mongodb.net/?retryWrites=true&w=majority
-      database: cluster0
+      uri: ${MONGO_URI}
+      database: ${MONGO_DB}
       port: 271017
   graphql:
     graphiql:

@@ -3,13 +3,13 @@ spring:
     name: payment-service
   r2dbc:
     url: r2dbc:mysql://localhost:3306/payment_store
-    username: root
-    password: root
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
   liquibase:
     change-log: classpath:db/changelog/liquibase-changelog.yaml
     url: jdbc:mysql://localhost:3306/payment_store
-    user: root
-    password: root
+    user: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
 
 axon:
   serializer:

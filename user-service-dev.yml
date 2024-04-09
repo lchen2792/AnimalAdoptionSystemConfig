@@ -22,8 +22,8 @@ spring:
       enabled: true
   data:
     mongodb:
-      uri: mongodb+srv://root:root@cluster0.gf4mguw.mongodb.net/?retryWrites=true&w=majority
-      database: cluster0
+      uri: ${MONGO_URI}
+      database: ${MONGO_DB}
       port: 271017
 
 resilience4j:
@@ -67,7 +67,7 @@ payment:
 gemini:
   base-url: https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
   api:
-    key: AIzaSyC6Jxj20yBoELyATmA7kIo1tZw6_D6SlPU
+    key: ${GEMINI_API_KEY}
 
 animal:
   profile:

@@ -3,7 +3,7 @@ server:
 
 axon:
   axonserver:
-    servers: axon-server:8124
+    servers: ${AXON_SERVER}
   
 eureka:
   # instance:

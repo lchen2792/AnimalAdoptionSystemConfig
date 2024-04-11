@@ -1,5 +1,9 @@
 server:
   port: 8889
+
+axon:
+  axonserver:
+    servers: axon-server:8124
   
 eureka:
   # instance:

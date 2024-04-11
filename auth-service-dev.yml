@@ -6,8 +6,8 @@ axon:
     servers: ${AXON_SERVER}
   
 eureka:
-  instance:
-    hostname: ${DISCOVERY_HOSTNAME}
+  # instance:
+  #   hostname: ${DISCOVERY_HOSTNAME}
   client:
     fetch-registry: true
     register-with-eureka: true

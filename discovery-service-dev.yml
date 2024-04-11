@@ -6,9 +6,8 @@ server:
   port: 8761
 
 eureka:
-  instance:
-    hostname: ${DISCOVERY_HOSTNAME}
-
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: ${DISCOVERY_SERVER_URL}

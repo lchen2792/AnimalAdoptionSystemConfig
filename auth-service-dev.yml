@@ -2,8 +2,8 @@ server:
   port: 8889
   
 eureka:
-  instance:
-    hostname: localhost
+  # instance:
+  #   hostname: localhost
   client:
     fetch-registry: true
     register-with-eureka: true

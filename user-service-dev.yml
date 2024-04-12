@@ -2,6 +2,8 @@ server:
   port: 0
 
 axon:
+  axonserver:
+    servers: ${AXON_SERVER}
   serializer:
     general: jackson
     events: jackson
@@ -62,7 +64,7 @@ resilience4j:
 
 payment:
   validation:
-    base-url: http://localhost:9000/payment-service
+    base-url: ${GATEWAY_SERVICE_URL}/payment-service
 
 gemini:
   base-url: https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
@@ -71,14 +73,12 @@ gemini:
 
 animal:
   profile:
-    base-url: http://localhost:9000/animal-service/graphql
+    base-url: ${GATEWAY_SERVICE_URL}/animal-service/graphql
 
 eureka:
-  instance:
-    hostname: localhost
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${DISCOVERY_SERVER_URL}
 

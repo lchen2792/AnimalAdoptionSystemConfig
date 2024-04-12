@@ -2,16 +2,18 @@ spring:
   application:
     name: payment-service
   r2dbc:
-    url: r2dbc:mysql://localhost:3306/payment_store
+    url: ${MYSQL_URL}
     username: ${MYSQL_USERNAME}
     password: ${MYSQL_PASSWORD}
   liquibase:
     change-log: classpath:db/changelog/liquibase-changelog.yaml
-    url: jdbc:mysql://localhost:3306/payment_store
+    url: ${LIQUIBASE_MYSQL_URL}
     user: ${MYSQL_USERNAME}
     password: ${MYSQL_PASSWORD}
 
 axon:
+  axonserver:
+    servers: ${AXON_SERVER}
   serializer:
     general: jackson
     events: jackson
@@ -21,15 +23,13 @@ server:
   port: 0
 
 stripe:
-  secret-key: sk_test_4eC39HqLyjWDarjtT1zdp7dc
+  secret-key: ${STRIPE_SECRET_KEY}
   application-fee: 60
 
 eureka:
-  instance:
-    hostname: localhost
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${DISCOVERY_SERVER_URL}
 
